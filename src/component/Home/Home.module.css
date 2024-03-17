@@ -1,0 +1,94 @@
+.body {
+  margin: 0 !important;
+}
+.container {
+  padding: 75px 90px 0px 95px;
+  border-top: 1px solid #e5e5e5;
+}
+.title {
+  font-family: monospace;
+  font-weight: 300;
+  margin: 0;
+  padding-bottom: 25px;
+  font-size: 42px;
+  text-align: center;
+}
+.productDesc {
+  padding: 10px 0px;
+  font-family: monospace;
+  font-weight: 300;
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+.filterToolBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.itemBar {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
+}
+.boldText {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0;
+}
+.filterButton {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 5px;
+}
+.filterButton span {
+  border-bottom: 1px solid #808080;
+  color: #808080;
+  font-weight: 400;
+  font-size: 20px;
+}
+.ArrowLeft {
+  transform: rotate(180deg);
+}
+@media (max-width: 919px) {
+  .container {
+    padding: 25px 20px 0px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .productDesc {
+    padding: 0px 0px 10px 0px;
+  }
+  .filterToolBar {
+    padding: 15px 0;
+  }
+  .drawer {
+    position: fixed;
+    width: 100%;
+  }
+  .title {
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+  .productDesc {
+    font-size: 12px;
+    padding-bottom: 0px;
+  }
+}
+@media (max-width: 633px) {
+  .itemBar {
+    width: fit-content;
+  }
+  .boldText {
+    font-size: 18px;
+  }
+  .filterButton {
+    font-size: 18px;
+  }
+}

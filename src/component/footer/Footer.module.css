@@ -1,0 +1,219 @@
+.footerContainer {
+  background: #000;
+  color: #fff;
+  margin-top: 45px;
+  padding: 40px 95px 0 95px;
+}
+.subscribeSec h1 {
+  padding: 30px 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+.subscribeSec p {
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}
+.emailSubscribe {
+  padding-top: 50px;
+  display: flex;
+  gap: 10px;
+}
+.emailSubscribe input {
+  height: 48px;
+  border-radius: 5px;
+  border: 1px;
+  opacity: 90%;
+  max-width: 350px;
+  width: 100%;
+  padding: 0 20px;
+}
+.emailSubscribe button {
+  height: 48px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #8080809b;
+  padding: 0 30px;
+  color: #8080809b;
+  background: #000;
+}
+.footerContactSec {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #fff;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 20px;
+}
+.contactSec h1 {
+  padding: 30px 0px 20px 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+.contactSec p {
+  padding-bottom: 20px;
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}
+.contactSec .currency {
+  padding: 0px 0px 20px 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+.transDescription {
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+}
+.footerLinkSection {
+  padding: 55px 0 18px 0;
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  gap: 20px;
+}
+.metaMuseLink h1 {
+  padding: 0px 0px 30px 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+.metaMuseLink p {
+  cursor: pointer;
+  padding-bottom: 20px;
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}
+.quickLink h1 {
+  padding: 0px 0px 30px 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+.quickLink p {
+  cursor: pointer;
+  padding-bottom: 20px;
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}
+.followAndPay {
+}
+.followSection h1 {
+  padding: 0px 0px 30px 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+.paySection {
+  padding-top: 50px;
+}
+.paySection h1 {
+  padding: 0px 0px 30px 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+.socialLogo {
+  display: flex;
+  gap: 10px;
+}
+.paymentLogo {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 1211px) {
+  .footerLinkSection {
+    grid-template-columns: 25% 25% 50%;
+    gap: 20px;
+  }
+  .footerContactSec {
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+  }
+}
+@media (max-width: 885px) {
+  .footerLinkSection {
+    display: block;
+  }
+  .footerContactSec {
+    display: block;
+  }
+  .footerContainer {
+    padding: 20px 20px 0 20px;
+  }
+  .paymentLogo {
+    gap: 5px;
+  }
+  .subscribeSec h1 {
+    padding: 10px 0;
+  }
+  .emailSubscribe {
+    padding-top: 15px;
+  }
+  .contactSec h1 {
+    padding: 15px 0px 10px 0px;
+  }
+  .contactSec p {
+    padding-bottom: 10px;
+  }
+  .currency {
+    padding-bottom: 10px;
+  }
+  .footerLinkSection {
+    padding: 25px 0 18px 0;
+  }
+  .metaMuseLink h1 {
+    padding: 0px 0px 15px 0px;
+  }
+  .metaMuseLink p {
+    padding: 0px 0px 10px 0px;
+  }
+  .quickLink h1 {
+    padding: 0px 0px 15px 0px;
+  }
+  .quickLink p {
+    padding: 0px 0px 10px 0px;
+  }
+  .followSection h1 {
+    padding: 0px 0px 15px 0px;
+  }
+  .paySection{
+    padding-top: 20px;
+  }
+  .paySection h1{
+    padding: 0px 0px 15px 0px;
+  }
+}
+@media (max-width: 425px) {
+  .paymentLogo img {
+    height: 25px;
+    width: 40px;
+  }
+}
+/* .paymentLogo img{
+  height: 27px;
+  width: 42px;
+} */

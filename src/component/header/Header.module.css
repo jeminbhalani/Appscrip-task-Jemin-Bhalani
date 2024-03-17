@@ -1,0 +1,76 @@
+.headerTop {
+  height: 32px;
+  background: #000;
+  display: flex;
+  align-items: center;
+}
+.headerbackground {
+  height: 30px;
+  width: 100%;
+  background-image: url(../../../public/assets/header/header-banner.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 33% 100%;
+}
+.headerLogo {
+  padding: 40px 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainLogo {
+  padding-right: 50px;
+  cursor: pointer;
+}
+.logoText {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 36px;
+}
+.headerFnImg {
+  display: flex;
+  gap: 10px;
+}
+.headerFnImg img {
+  cursor: pointer;
+}
+.headerLinks {
+  display: flex;
+  justify-content: center;
+  padding: 20px 95px 0 95px;
+  align-items: center;
+  gap: 25px;
+}
+.headerLinks p {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .headerbackground {
+    background-size: 100% 100%;
+  }
+  .hideLogo{
+    display: none;
+  }
+  .headerLogo{
+    padding: 15px 30px;
+  }
+  .mainLogo{
+    padding-right: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .headerLinks {
+    gap: 15px;
+  }
+  .headerLinks p {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .headerLinks{
+    display: none;
+  }
+}

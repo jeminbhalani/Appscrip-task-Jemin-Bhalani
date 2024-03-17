@@ -1,0 +1,65 @@
+.filterSection {
+  padding: 25px 10px 25px 0;
+}
+.filterSection input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-right: 5px; /* Adjust as needed */
+}
+.allCheckBox input[type="checkbox"] {
+  width: 0px;
+  height: 0px;
+  margin: 0;
+  margin-right: 5px;
+}
+.filterSection label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 18px;
+}
+.accordionHeader {
+    cursor: pointer;
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordionTitle {
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 18px;
+}
+.accordionAll {
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: 300;
+    font-size: 14px;
+}
+.arrowLeft {
+  transform: rotate(270deg);
+}
+.arrowRight {
+    transform: rotate(90deg);
+}
+.accordion {
+    padding: 25px 0px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.customizbleCheckbox {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.checkboxWrap {
+    padding-bottom: 20px;
+}
+
+.allCheckBox {
+  padding-top: 20px;
+  text-transform: capitalize !important;
+  font-size: 16px !important;
+}

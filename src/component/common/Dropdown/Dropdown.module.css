@@ -1,0 +1,47 @@
+.dropDown {
+  cursor: pointer;
+  position: relative !important;
+}
+.ArrowDown {
+  transform: rotate(90deg);
+  padding: 0 0 5px 5px;
+}
+.dropDownMenu {
+  position: absolute !important;
+}
+.openDropDown {
+  display: block;
+  position: absolute;
+  background: #fff;
+  padding: 5px 20px;
+  text-wrap: nowrap;
+  border-radius: 5px;
+  right: 5px;
+  top: 25px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.closeDropDown {
+  display: none;
+}
+.openDropDown p {
+  text-align: end;
+}
+.boldText {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 18px;
+  justify-content: end;
+  display: flex;
+  align-items: center;
+}
+.textDropVal {
+  display: flex;
+  align-items: center;
+}
+.normalText {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 300;
+  font-size: 16px;
+}

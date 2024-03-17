@@ -1,0 +1,10 @@
+.container {
+  padding: 75px 90px 0px 95px;
+  border-top: 1px solid #e5e5e5;
+}
+.productWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}

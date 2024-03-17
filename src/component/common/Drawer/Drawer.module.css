@@ -1,0 +1,73 @@
+.drawerContainer {
+  display: flex;
+}
+.drawer {
+  position: relative;
+  left: -320px;
+  width: 320px;
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease-in-out;
+  margin-right: 20px;
+}
+
+.drawer.open {
+  left: 0;
+  display: block;
+}
+.drawer.close {
+  display: none;
+}
+.content {
+  transition: margin-left 0.3s ease-in-out;
+  width: calc(100vw - 180px);
+  display: block;
+}
+.closeContent {
+  transition: margin-left 0.3s ease-in-out;
+  width: calc(100vw - 480px); 
+  display: block;
+}
+.productWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+.ArrowDown {
+  transform: translate(90deg);
+}
+.closeIcon {
+  display: none;
+}
+@media (max-width: 775px) {
+  .drawerContainer {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .drawer.open {
+    position: fixed;
+    width: calc(100vw - 45px);
+    height: 100vh;
+    top: 0;
+    padding: 25px 20px 0px 25px;
+    z-index: 9;
+  }
+  
+  .closeIcon {
+    display: flex;
+    justify-content: end;
+  }
+  .closeContent{
+    display: none;
+  }
+}
+
+@media (max-width:919px) {
+  .content {
+    transition: margin-left 0.3s ease-in-out;
+    width: calc(100vw - 45px);
+    display: block;
+  }
+}
