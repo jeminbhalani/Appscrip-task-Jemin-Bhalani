@@ -6,7 +6,7 @@ import FilterProductDrawer from "../common/Drawer";
 import style from "./Home.module.css";
 import { dropDownValue } from "@/utils";
 
-export default function HomePage({ productItems, categoryItems }) {
+export default function HomePage({ productItems, categoryItems, setProductItems }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("ASC");
 
@@ -34,7 +34,7 @@ export default function HomePage({ productItems, categoryItems }) {
               height={16}
               alt="Arrow Left Logo"
             />
-            <span>{isOpen ? "SHOW" : "HIDE"} FILTER</span>
+            <span>{isOpen ? "HIDE" : "SHOW"} FILTER</span>
           </div>
         </div>
         <Dropdown
@@ -46,6 +46,7 @@ export default function HomePage({ productItems, categoryItems }) {
       <FilterProductDrawer
         categoryItems={categoryItems}
         productItems={productItems}
+        setProductItems={setProductItems}
         isOpen={isOpen}
         toggleDrawer={toggleDrawer}
       />

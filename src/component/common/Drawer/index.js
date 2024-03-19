@@ -10,6 +10,7 @@ function FilterProductDrawer({
   productItems,
   categoryItems,
   toggleDrawer,
+  setProductItems
 }) {
   const [products, setProducts] = useState();
 
@@ -51,7 +52,7 @@ function FilterProductDrawer({
             alt="Close Icon"
           />
         </div>
-        <Filter categoryItems={categoryItems} />
+        <Filter categoryItems={categoryItems} setProductItems={setProductItems} />
       </div>
       <div
         className={isOpen ? style.closeContent : style.content}

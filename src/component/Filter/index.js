@@ -2,11 +2,14 @@
 import React, { useEffect, useState } from "react";
 import style from "./Filter.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
-function Filter({ categoryItems }) {
+function Filter({ categoryItems, setProductItems }) {
+  const router = useRouter();
   const [accordionOptions, setAccordionOptions] = useState([
     { title: "Ideal for", options: ["Men", "Women", "Kids"], selected: [] },
   ]);
+  const selected = router?.query?.selected || "asc";
   useEffect(() => {
     if (categoryItems.length) {
       setAccordionOptions([
@@ -21,7 +24,7 @@ function Filter({ categoryItems }) {
     setAccordionOptions(updatedOptions);
   };
 
-  const handleCheckboxChange = (accordionIndex, optionIndex) => {
+  const handleCheckboxChange = async (accordionIndex, optionIndex) => {
     const updatedOptions = [...accordionOptions];
     const isChecked =
       updatedOptions[accordionIndex].selected.includes(optionIndex);
@@ -33,11 +36,35 @@ function Filter({ categoryItems }) {
     } else {
       updatedOptions[accordionIndex].selected.push(optionIndex);
     }
-
+    if (updatedOptions[0]?.selected.length) {
+      try {
+        const res = await Promise.all(
+          updatedOptions[0]?.selected?.map((x) =>
+            fetch(
+              `https://fakestoreapi.com/products/category/${updatedOptions[0]?.options?.[x]}?sort=${selected}`
+            )
+          )
+        );
+        const data = await Promise.all(res.map((r) => r.json()));
+        setProductItems(data.flat())
+      } catch (error) {
+        return error
+      }
+    } else {
+      try {
+        const res = await fetch(
+          `https://fakestoreapi.com/products?sort=${selected}`
+        );
+        const data = await res.json()
+        setProductItems(data)
+      } catch (error) {
+        return error
+      }
+    }
     setAccordionOptions(updatedOptions);
   };
 
-  const toggleSelectAll = (accordionIndex, selectAll) => {
+  const toggleSelectAll =async (accordionIndex, selectAll) => {
     const updatedOptions = [...accordionOptions];
     if (selectAll) {
       updatedOptions[accordionIndex].selected = updatedOptions[
@@ -45,6 +72,31 @@ function Filter({ categoryItems }) {
       ].options.map((_, index) => index);
     } else {
       updatedOptions[accordionIndex].selected = [];
+    }
+    if (updatedOptions[0]?.selected.length) {
+      try {
+        const res = await Promise.all(
+          updatedOptions[0]?.selected?.map((x) =>
+            fetch(
+              `https://fakestoreapi.com/products/category/${updatedOptions[0]?.options?.[x]}?sort=${selected}`
+            )
+          )
+        );
+        const data = await Promise.all(res.map((r) => r.json()));
+        setProductItems(data.flat())
+      } catch (error) {
+        return error
+      }
+    } else {
+      try {
+        const res = await fetch(
+          `https://fakestoreapi.com/products?sort=${selected}`
+        );
+        const data = await res.json()
+        setProductItems(data)
+      } catch (error) {
+        return error
+      }
     }
     setAccordionOptions(updatedOptions);
   };
